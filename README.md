@@ -1,11 +1,37 @@
 # Job Application Tracker
 
 A backend REST API built with **NestJS** to track job applications.  
+This project uses a **feature-based modular architecture** with controllers, services, DTOs, and entities.  
+The API can be tested manually using **curl**.
+
+---
+
+## Tech Stack
+
+- **Backend:** NestJS (Node.js + TypeScript)  
+- **Testing:** curl (manual API testing)  
+- **Package Manager:** npm  
+- **Architecture:** Modular, feature-based  
+- **Version Control:** Git  
+
+---
+
+##  Getting Started
+
+### 1. Install NestJS CLI
+```bash
+npm i -g @nestjs/cli
+
+
+
+# Job Application Tracker
+
+A backend REST API built with **NestJS** to show how module and track job applications.  
 This project uses a **feature-based modular architecture** with controllers, services, DTOs, and entities.
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Backend:** NestJS (Node.js + TypeScript)  
 - **Testing:** curl  
@@ -15,7 +41,7 @@ This project uses a **feature-based modular architecture** with controllers, ser
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```txt
 application-tracker/
