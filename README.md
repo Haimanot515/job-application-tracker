@@ -8,7 +8,7 @@ This project uses a **feature-based modular architecture** with controllers, ser
 ## 🚀 Tech Stack
 
 - **Backend:** NestJS (Node.js + TypeScript)  
-- **Testing:** Jest  
+- **Testing:** curl  
 - **Package Manager:** npm  
 - **Architecture:** Modular, feature-based  
 - **Version Control:** Git
