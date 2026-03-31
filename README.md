@@ -1,38 +1,56 @@
-## NestJS Folder Structure
+# Job Application Tracker
 
-- **src/** → Main application source code
-- **main.ts** → Application entry point; starts the NestJS server
-- **app.module.ts** → Root module that connects all feature modules
-- **app.controller.ts** → Default controller that handles incoming requests
-- **app.service.ts** → Default service containing business logic
-- **app.controller.spec.ts** → Unit test for AppController
+A backend REST API built with **NestJS** to track job applications.  
+This project uses a **feature-based modular architecture** with controllers, services, DTOs, and entities.
 
-### Jobs Feature (`src/jobs/`)
-- **jobs.module.ts** → Groups all jobs-related components
-- **jobs.controller.ts** → Handles HTTP routes for jobs
-- **jobs.service.ts** → Contains business logic for jobs
-- **jobs.controller.spec.ts** → Unit test for JobsController
+---
 
-### DTOs (`src/jobs/dto/`)
-- **create-job.dto.ts** → Defines request body structure for creating a job
-- **update-job.dto.ts** → Defines request body structure for updating a job
+## 🚀 Tech Stack
 
-### Entities (`src/jobs/entities/`)
-- **job.entity.ts** → Represents the Job model/entity structure
+- **Backend:** NestJS (Node.js + TypeScript)  
+- **Testing:** Jest  
+- **Package Manager:** npm  
+- **Architecture:** Modular, feature-based  
+- **Version Control:** Git
 
-### Testing
-- **test/** → End-to-end testing files
-- **app.e2e-spec.ts** → End-to-end test for application flow
-- **jest-e2e.json** → Jest config for e2e tests
+---
 
-### Root Files
-- **package.json** → Project metadata, scripts, and dependencies
-- **package-lock.json** → Locks exact dependency versions
-- **.gitignore** → Files/folders Git should ignore
-- **.prettierrc** → Prettier formatting config
-- **eslint.config.mjs** → ESLint configuration
-- **nest-cli.json** → NestJS CLI configuration
-- **tsconfig.json** → Main TypeScript configuration
-- **tsconfig.build.json** → TypeScript build configuration
-- **README.md** → Project documentation
-- **node_modules/** → Installed packages (should not be committed)
+## 📂 Project Structure
+
+```txt
+application-tracker/
+│
+├── src/
+│   ├── main.ts                  # Application entry point
+│   ├── app.module.ts            # Root module connecting all feature modules
+│   ├── app.controller.ts        # Default controller for root route
+│   ├── app.service.ts           # Default service for root logic
+│   ├── app.controller.spec.ts   # Unit test for AppController
+│   │
+│   └── jobs/                    # Jobs feature folder
+│       ├── dto/                 # Data Transfer Objects
+│       │   ├── create-job.dto.ts  # Structure of data for creating a job
+│       │   └── update-job.dto.ts  # Structure of data for updating a job
+│       │
+│       ├── entities/
+│       │   └── job.entity.ts    # Job model/entity definition
+│       │
+│       ├── jobs.controller.ts   # Handles HTTP routes for jobs
+│       ├── jobs.service.ts      # Business logic for jobs
+│       ├── jobs.module.ts       # Jobs module that ties controller & service
+│       └── jobs.controller.spec.ts  # Unit test for JobsController
+│
+├── test/
+│   ├── app.e2e-spec.ts          # End-to-end test file
+│   └── jest-e2e.json            # Jest config for e2e testing
+│
+├── node_modules/                # Installed npm packages (ignored in Git)
+├── .gitignore                   # Git ignore rules
+├── .prettierrc                  # Prettier formatting config
+├── eslint.config.mjs            # ESLint configuration
+├── nest-cli.json                # NestJS CLI configuration
+├── package.json                 # Project metadata, scripts, and dependencies
+├── package-lock.json            # Exact versions of installed packages
+├── tsconfig.json                # TypeScript configuration
+├── tsconfig.build.json          # TypeScript build config
+└── README.md                    # Project documentation
